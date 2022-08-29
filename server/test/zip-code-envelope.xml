@@ -1,0 +1,24 @@
+<html>
+<script src="https://cdn.jsdelivr.net/npm/easy-soap-request/dist/easy-soap-request.js"></script>
+<script>
+    const url = 'https://my-soap-server';
+    const sampleHeaders = {
+        'Content-Type': 'text/xml;charset=UTF-8',
+        SOAPAction: 'https://my-soap-action/something',
+    };
+    const xml = `<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+                 <soapenv:Header/>
+                 <soapenv:Body>Some Data</soapenv:Body>
+                 </soapenv:Envelope>`;
+    async function makeRequest() {
+        const { response } = await soapRequest({ url: url, headers: sampleHeaders, xml: xml, timeout: 1000 });
+        const { headers, body, statusCode } = response;
+        console.log(headers);
+        console.log(body);
+        console.log(statusCode);
+        document.body.innerHTML = body;
+    };
+    makeRequest();
+</script>
+<body></body>
+</html>

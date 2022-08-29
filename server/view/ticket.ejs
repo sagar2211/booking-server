@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <mate charest="utf-8" />
+    <link rel="stylesheet" href="../../public/css/style.css">
+    <title>Wadiia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="mt-5">
+        <section class="print">
+            <header style="background:#0057B9!important; padding: 10px 0px;justify-content: space-between; width: 100%"
+                class="headerTop">
+                <div style="float:left; margin: 0;" class="headerImg">
+                    <img src="https://www.wadiia.co.za/assets/images/logo-03.svg" width="62.34px" alt="wadiiaLogo">
+                </div>
+                <div style="float:right; margin: 0;" class="headerText">
+                    <p style="font-family: Open Sans !important;
+                            font-style: normal;
+                            color: #fff;
+                            font-weight: 600;
+                            font-size: 12px;
+                            margin: 0;">
+                        Wadiia Booking ID W09238493759
+                    </p>
+                </div>
+                <div style="clear:both;"></div>
+            </header>
+
+            <% for(var i=0; i<mailDetails.length; i++) { %>
+                <div class="baggage mt-3 p-3">
+                    <table class="table underTable">
+
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <!--** CONTENT GOES HERE **-->
+                                        <div class="page pt-1 m-1">
+                                            <p style="font-family: Open Sans !important;
+                                        font-style: normal;
+                                        font-weight: 500;
+                                        font-size: 12px;" class="topText">
+                                                Proof of cittizenship is required for international travel. be sure to
+                                                bring
+                                                necessary
+                                                documentation (e.g.passport, visa, transit permit). To learn more visit
+                                                our
+                                                Visa and
+                                                passport page.
+                                            </p>
+
+                                            <div style="width: 100%;" class="mt-2 ticketConfirmCard">
+                                                <h3 class="head" style="margin-left: 5px;font-family: Open Sans !important;
+                                            font-style: normal;
+                                            font-weight: 500;
+                                            font-size: 16px;
+                                            color: #0057B9;">TICKET - Confirm</h3>
+                                                <div style="padding: 10px; background: rgba(188, 213, 243, 0.4)!important; text-align: center;color: #0057B9;"
+                                                    class="fbDiv fentBlue">
+                                                    <div style="float: left;text-align: left; width: 33.33%;">
+                                                        <span style="font-family: Open Sans !important;
+                                                    font-style: normal;
+                                                    font-weight: 500;
+                                                    font-size: 12px;
+                                                    align-items: center;
+                                                    color: #0057B9;" class="fs">2022-06-16T06:30:00
+                                                        </span>
+                                                    </div>
+                                                    <div style="float: left; text-align: center;width: 33.33%;">
+                                                        <span style="font-family: Open Sans !important;
+                                                    font-style: normal;
+                                                    font-weight: 500;
+                                                    font-size: 12px;
+                                                    align-items: center;
+                                                    color: #0057B9;" class="fs">London TO Johannesburg
+                                                        </span>
+                                                    </div>
+                                                    <div style="float: left; text-align: right;width: 33.33%;">
+                                                        <span style="font-family: Open Sans !important;
+                                                    font-style: normal;
+                                                    font-weight: 500;
+                                                    font-size: 12px;
+                                                    align-items: center;
+                                                    color: #0057B9;" class="fs">3h 30m</span>
+                                                    </div>
+                                                    <div style="clear: both;"></div>
+                                                </div>
+                                                <div class="rute">
+                                                    <div style="float: left;width: 25%;" class="airlineImg">
+                                                        <img src="https://www.wadiia.co.za/assets/airlineLogos/Rectangular/<%= mailDetails[i].bookingObj.result.bookings[0].bookingResponse.legs[0].segments[0].carrier.code%>.png"
+                                                            width="87px" alt="">
+                                                        <p class="airlineName textRight">
+                                                            <%=
+                                                                mailDetails[i].bookingObj.result.bookings[0].bookingResponse.legs[0].segments[0].carrier.hint%>
+                                                        </p>
+                                                        <p class="airlineNo textRight">
+                                                            <%=
+                                                                mailDetails[i].bookingObj.result.bookings[0].bookingResponse.legs[0].segments[0].carrier.code%>
+                                                                -<%=
+                                                                    mailDetails[i].bookingObj.result.bookings[0].bookingResponse.legs[0].segments[0].flightNumber%>
+                                                        </p>
+                                                    </div>
+                                                    <div style="float: left;width: 25%;" class="depart">
+                                                        <h2 class="textRight">
+                                                            <%=
+                                                                mailDetails[i].bookingObj.result.bookings[0].bookingResponse.legs[0].segments[0].departure.cityCode%>
+                                                        </h2>
+                                                        <p class="cityName textRight">
+                                                            <%=
+                                                                mailDetails[i].bookingObj.result.bookings[0].bookingResponse.legs[0].segments[0].departure.cityName%>
+                                                        </p>
+                                                        <p class="time textRight">
+                                                            <span class="depart-time">
+                                                                <%=
+                                                                    mailDetails[i].bookingObj.result.bookings[0].bookingResponse.legs[0].segments[0].departureDate%>
+                                                            </span>,
+                                                            <span class="">
+                                                                <%=mailDetails[i].bookingObj.result.bookings[0].bookingResponse.legs[0].segments[0].departureDate%>
+                                                            </span>
+                                                        </p>
+                                                        <p class="airport textRight">
+                                                            <%=
+                                                                mailDetails[i].bookingObj.result.bookings[0].bookingResponse.legs[0].segments[0].departure.name%>
+                                                        </p>
+                                                        <p class="terminal textRight">Terminal 2</p>
+                                                    </div>
+                                                    <div style="float: left;width: 25%;" class="cabinSection">
+                                                        <p class="dur">
+                                                            <%= mailDetails[i].
+                                                                flightdata.legs[0].connections[0].connectionHeader.legTravelTime.addHours%>
+                                                                h
+                                                                <%= mailDetails[i].
+                                                                    flightdata.legs[0].connections[0].connectionHeader.legTravelTime.minutes%>
+                                                                    m
+                                                        </p>
+                                                        <div class="line"
+                                                            style="width: 80px;height:1px;border: 1px solid #0057b9;">
+                                                        </div>
+                                                        <p class="cabin">
+                                                            <%=
+                                                                mailDetails[i].bookingObj.result.bookings[0].bookingResponse.pnr.segments[0].cabinClass%>
+                                                        </p>
+                                                    </div>
+                                                    <div style="float: left;width: 25%;" class="return">
+                                                        <h2>
+                                                            <%= mailDetails[i].bookingObj.result.bookings[0].bookingResponse.legs[0].segments[
+                                                                mailDetails[i].bookingObj.result.bookings[0].bookingResponse.legs[0].segments.length-1].arrival.cityCode%>
+                                                        </h2>
+                                                        <p class=" cityName">
+                                                            <%= mailDetails[i].bookingObj.result.bookings[0].bookingResponse.legs[0].segments[
+                                                                mailDetails[i].bookingObj.result.bookings[0].bookingResponse.legs[0].segments.length-1].arrival.cityName%>
+                                                        </p>
+                                                        <p class="time">
+                                                            <span class="depart-time">
+                                                                <%=mailDetails[i].bookingObj.result.bookings[0].bookingResponse.legs[0].segments[0].arrivalDate%>
+                                                            </span>,
+                                                            <span class="">
+                                                                <%=
+                                                                    mailDetails[i].bookingObj.result.bookings[0].bookingResponse.legs[0].segments[0].arrivalDate%>
+                                                            </span>
+                                                        </p>
+                                                        <p class="airport">
+                                                            <%= mailDetails[i].bookingObj.result.bookings[0].bookingResponse.legs[0].segments[
+                                                                mailDetails[i].bookingObj.result.bookings[0].bookingResponse.legs[0].segments.length-1].arrival.name%>
+                                                        </p>
+                                                        <p class="terminal">Terminal 2</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card"
+                                                style="box-shadow: 1px 0 10px 0 rgba(0, 0, 0, 0.2), 0 1px 10px 0 rgba(0, 0, 0, 0.24);border-radius: 4px;padding: 20px;page-break-after:auto;">
+                                                <h3 class="head" style="margin-left: 5px;font-family: Open Sans !important;
+                                            font-style: normal;
+                                            font-weight: 500;
+                                            font-size: 16px;
+                                            color: #0057B9;">PASSENGER DETAILS</h3>
+                                                <div class="card-body">
+                                                    <div style="padding: 10px; background: rgba(188, 213, 243, 0.4)!important; text-align: center;color: #0057B9;"
+                                                        class="fbDiv fentBlue">
+                                                        <div style="float: left;text-align: left; width: 33.33%;">
+                                                            <span style="font-family: Open Sans !important;
+                                                font-style: normal;
+                                                font-weight: 500;
+                                                font-size: 12px;
+                                                align-items: center;
+                                                color: #0057B9;" class="fs">PASSENGER NAME
+                                                            </span>
+                                                        </div>
+                                                        <div style="float: left; text-align: center;width: 33.33%;">
+                                                            <span style="font-family: Open Sans !important;
+                                                font-style: normal;
+                                                font-weight: 500;
+                                                font-size: 12px;
+                                                align-items: center;
+                                                color: #0057B9;" class="fs">PNR
+                                                            </span>
+                                                        </div>
+                                                        <div style="float: left; text-align: right;width: 33.33%;">
+                                                            <span style="font-family: Open Sans !important;
+                                                font-style: normal;
+                                                font-weight: 500;
+                                                font-size: 12px;
+                                                align-items: center;
+                                                color: #0057B9;" class="fs">E-TICKET NO</sp>
+                                                        </div>
+                                                        <div style="clear: both;"></div>
+                                                    </div>
+                                                    <div style="padding: 10px;">
+                                                        <% for(var j=0; j
+                                                            <mailDetails[i].bookingObj.result.bookings[0].bookingResponse.passengers.length;
+                                                            j++) { %>
+                                                            <div style="padding-top: 10px;">
+                                                                <div
+                                                                    style="float: left;text-align: left; width: 33.33%;">
+                                                                    <span style="font-family: Open Sans !important;
+                                                        font-style: normal;
+                                                        font-weight: 500;
+                                                        font-size: 12px;
+                                                        align-items: center;
+                                                        color: #000;" class="fs">
+                                                                        <%=
+                                                                            mailDetails[i].bookingObj.result.bookings[0].bookingResponse.passengers[j].firstName%>
+                                                                            <%=
+                                                                                mailDetails[i].bookingObj.result.bookings[0].bookingResponse.passengers[j].lastName%>
+                                                                    </span>
+                                                                    <span style="font-family: Open Sans !important;
+                                                        font-style: normal;
+                                                        font-weight: 400;
+                                                        font-size: 12px;
+                                                        align-items: center;
+                                                        color: #525252;" class="fs">
+                                                                        <%=
+                                                                            mailDetails[i].bookingObj.result.bookings[0].bookingResponse.passengers[j].passengerType%>
+                                                                    </span>
+                                                                </div>
+                                                                <div
+                                                                    style="float: left; text-align: center;width: 33.33%;">
+                                                                    <span style="font-family: Open Sans !important;
+                                                        font-style: normal;
+                                                        font-weight: 500;
+                                                        font-size: 12px;
+                                                        align-items: center;
+                                                        color: #000;" class="fs">
+                                                                        <%=
+                                                                            mailDetails[i].bookingObj.result.bookings[0].bookingResponse.recordLocator%>
+                                                                    </span>
+                                                                </div>
+                                                                <div
+                                                                    style="float: left; text-align: right;width: 33.33%;">
+                                                                    <span style="font-family: Open Sans !important;
+                                                        font-style: normal;
+                                                        font-weight: 500;
+                                                        font-size: 12px;
+                                                        align-items: center;
+                                                        color: #000;" class="fs">
+                                                                        <%=
+                                                                            mailDetails[i].bookingObj.result.bookings[0].bookingResponse.recordLocator%>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                            <% } %>
+
+                                                                <div style="padding-top: 10px;">
+                                                                    <span style="font-style: normal;
+                                                    font-weight: 400;
+                                                    font-size: 12px;">Seat assigments, Special meals, and special
+                                                                        assistance request should be confirmed with
+                                                                        the airline.</span>
+                                                                </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="card"
+                                                style="page-break-after:auto;box-shadow: 1px 0 10px 0 rgba(0, 0, 0, 0.2), 0 1px 10px 0 rgba(0, 0, 0, 0.24);border-radius: 4px;padding: 20px;">
+                                                <div class="card-body">
+                                                    <h3 class="head" style="margin-left: 5px;font-family: Open Sans !important;
+                                                font-style: normal;
+                                                font-weight: 500;
+                                                font-size: 16px;
+                                                color: #0057B9;">BAGGAGE INFORMATION</h3>
+                                                    <div style="padding: 10px; background: rgba(188, 213, 243, 0.4)!important; text-align: center;color: #0057B9;"
+                                                        class="fbDiv fentBlue">
+                                                        <div style="float: left;text-align: left; width: 25%;">
+                                                            <span style="font-family: Open Sans !important;
+                                                    font-style: normal;
+                                                    font-weight: 500;
+                                                    font-size: 12px;
+                                                    align-items: center;
+                                                    color: #0057B9;" class="fs">PASSENGER NAME
+                                                            </span>
+                                                        </div>
+                                                        <div style="float: left; text-align: center;width: 25%;">
+                                                            <span style="font-family: Open Sans !important;
+                                                    font-style: normal;
+                                                    font-weight: 500;
+                                                    font-size: 12px;
+                                                    align-items: center;
+                                                    color: #0057B9;" class="fs">SECTOR
+                                                            </span>
+                                                        </div>
+                                                        <div style="float: left; text-align: right;width: 25%;">
+                                                            <span style="font-family: Open Sans !important;
+                                                    font-style: normal;
+                                                    font-weight: 500;
+                                                    font-size: 12px;
+                                                    align-items: center;
+                                                    color: #0057B9;" class="fs">CABIN</sp>
+                                                        </div>
+                                                        <div style="float: left; text-align: right;width: 25%;">
+                                                            <span style="font-family: Open Sans !important;
+                                                    font-style: normal;
+                                                    font-weight: 500;
+                                                    font-size: 12px;
+                                                    align-items: center;
+                                                    color: #0057B9;" class="fs">CHECK-IN</sp>
+                                                        </div>
+                                                        <div style="clear: both;"></div>
+                                                    </div>
+                                                    <div style="padding: 10px;">
+                                                        <% for(var j=0; j
+                                                            <mailDetails[i].bookingObj.result.bookings[0].bookingResponse.pnr.passengers.length;
+                                                            j++) { %>
+                                                            <div style="padding-top: 10px;">
+                                                                <div style="float: left;text-align: left; width: 25%;">
+                                                                    <span style="font-family: Open Sans !important;
+                                                            font-style: normal;
+                                                            font-weight: 500;
+                                                            font-size: 12px;
+                                                            align-items: center;
+                                                            color: #000;" class="fs">
+                                                                        <%=
+                                                                            mailDetails[i].bookingObj.result.bookings[0].bookingResponse.pnr.passengers[j].firstName%>
+                                                                            <%=
+                                                                                mailDetails[i].bookingObj.result.bookings[0].bookingResponse.pnr.passengers[j].lastName%>
+                                                                                <span style="font-family: Open Sans !important;
+                                                            font-style: normal;
+                                                            font-weight: 400;
+                                                            font-size: 12px;
+                                                            align-items: center;
+                                                            color: #525252;" class="fs">
+                                                                                    <%=mailDetails[i].bookingObj.result.bookings[0].bookingResponse.passengers[j].passengerType%>
+                                                                                </span>
+                                                                </div>
+                                                                <div
+                                                                    style="float: left; text-align: center;width: 25%;">
+                                                                    <span style="font-family: Open Sans !important;
+                                                            font-style: normal;
+                                                            font-weight: 500;
+                                                            font-size: 12px;
+                                                            align-items: center;
+                                                            color: #000;" class="fs">
+                                                                        <%=
+                                                                            mailDetails[i].bookingObj.result.bookings[0].bookingResponse.legs[0].segments[0].departure.cityCode%>
+                                                                            -
+                                                                            <%=
+                                                                                mailDetails[i].bookingObj.result.bookings[0].bookingResponse.legs[0].segments[mailDetails[i].bookingObj.result.bookings[0].bookingResponse.legs[0].segments.length-1].arrival.cityCode%>
+                                                                    </span>
+                                                                </div>
+                                                                <div style="float: left; text-align: right;width: 25%;">
+                                                                    <span style="font-family: Open Sans !important;
+                                                            font-style: normal;
+                                                            font-weight: 500;
+                                                            font-size: 12px;
+                                                            align-items: center;
+                                                            color: #000;" class="fs">
+                                                                        <%=
+                                                                            mailDetails[i].bookingObj.result.bookings[0].bookingResponse.pnr.storedFares[0].ticketingSegments[0].freeBaggageAllowance%>
+                                                                    </span>
+                                                                </div>
+                                                                <div style="float: left; text-align: right;width: 25%;">
+                                                                    <span style="font-family: Open Sans !important;
+                                                            font-style: normal;
+                                                            font-weight: 500;
+                                                            font-size: 12px;
+                                                            align-items: center;
+                                                            color: #000;" class="fs">
+                                                                        <%=
+                                                                            mailDetails[i].bookingObj.result.bookings[0].bookingResponse.pnr.storedFares[0].ticketingSegments[0].fareBase%>
+                                                                    </span>
+                                                                </div>
+                                                                <div style="clear: both;"></div>
+                                                            </div>
+                                                            <div style="clear: both;"></div>
+                                                            <% for(var k=0; k
+                                                                <mailDetails[i].bookingObj.result.bookings[0].bookingResponse.pnr.passengers[j].specialServiceRequests.length;
+                                                                k++) { %>
+                                                                <%if (mailDetails[i].bookingObj.result.bookings[0].bookingResponse.pnr.passengers[j].specialServiceRequests[k].chargeable)
+                                                                    { %>
+                                                                    <div style="padding-top: 10px;">
+                                                                        <div
+                                                                            style="float: left;text-align: left; width: 25%;">
+                                                                            <span style="font-family: Open Sans !important;
+                                                                font-style: normal;
+                                                                font-weight: 500;
+                                                                font-size: 12px;
+                                                                align-items: center;
+                                                                color: #000;" class="fs">
+                                                                                <%=
+                                                                                    mailDetails[i].bookingObj.result.bookings[0].bookingResponse.pnr.passengers[j].firstName%>
+                                                                                    <%=mailDetails[i].bookingObj.result.bookings[0].bookingResponse.pnr.passengers[j].lastName%>
+                                                                                        &nbsp;
+                                                                                        EXTRA BAG
+                                                                                        &nbsp;
+                                                                                        <%= k %>
+                                                                            </span>
+                                                                        </div>
+                                                                        <div
+                                                                            style="float: left; text-align: center;width: 25%;">
+                                                                            <span style="font-family: Open Sans !important;
+                                                                font-style: normal;
+                                                                font-weight: 500;
+                                                                font-size: 12px;
+                                                                align-items: center;
+                                                                color: #000;" class="fs">
+                                                                                <%=
+                                                                                    mailDetails[i].bookingObj.result.bookings[0].bookingResponse.legs[0].segments[0].departure.cityCode%>
+                                                                                    -
+                                                                                    <%=
+                                                                                        mailDetails[i].bookingObj.result.bookings[0].bookingResponse.legs[0].segments[mailDetails[i].bookingObj.result.bookings[0].bookingResponse.legs[0].segments.length-1].arrival.cityCode%>
+                                                                            </span>
+                                                                        </div>
+                                                                        <div
+                                                                            style="float: left; text-align: right;width: 25%;">
+                                                                            <span style="font-family: Open Sans !important;
+                                                                font-style: normal;
+                                                                font-weight: 500;
+                                                                font-size: 12px;
+                                                                align-items: center;
+                                                                color: #000;" class="fs">
+                                                                                <%=mailDetails[i].bookingObj.result.bookings[0].bookingResponse.pnr.passengers[j].specialServiceRequests[k].code%>
+                                                                            </span>
+                                                                        </div>
+                                                                        <div
+                                                                            style="float: left; text-align: right;width: 25%;">
+                                                                            <span style="font-family: Open Sans !important;
+                                                                font-style: normal;
+                                                                font-weight: 500;
+                                                                font-size: 12px;
+                                                                align-items: center;
+                                                                color: #000;" class="fs">
+                                                                                <%=mailDetails[i].bookingObj.result.bookings[0].bookingResponse.pnr.passengers[j].specialServiceRequests[k].text%>
+                                                                            </span>
+                                                                        </div>
+                                                                        <div style="clear: both;"></div>
+                                                                    </div>
+                                                                    <% } %>
+                                                                        <% } %>
+                                                                            <% } %>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="card"
+                                            style="page-break-after:auto;box-shadow: 1px 0 10px 0 rgba(0, 0, 0, 0.2), 0 1px 10px 0 rgba(0, 0, 0, 0.24);border-radius: 4px;padding: 20px;">
+                                            <div class="card-body">
+                                                <h3 class="head" style="margin-left: 5px;font-family: Open Sans !important;
+                                                font-style: normal;
+                                                font-weight: 500;
+                                                font-size: 16px;
+                                                color: #0057B9;">EXTRA CONVENIENCE</h3>
+                                                <div style="padding: 10px; background: rgba(188, 213, 243, 0.4)!important;"
+                                                    class="fbDiv fentBlue">
+                                                    <span style="font-family: Open Sans !important;
+                                                font-style: normal;
+                                                font-weight: 600;
+                                                font-size: 12px;
+                                                align-items: center;" class="fs">Additional Services Purchase
+                                                    </span>
+                                                    <span style="font-family: Open Sans !important;
+                                                font-style: normal;
+                                                font-weight: 600;
+                                                font-size: 12px;
+                                                align-items: center;" class="fs">Price
+                                                    </span>
+                                                </div>
+
+                                                <% for(var k=0; k <mailDetails[i].extraService.hepstarServices.length;
+                                                    k++) { %>
+                                                    <div>
+                                                        <div style="float: left;font-family: Open Sans !important;
+                                                font-style: normal;
+                                                font-weight: 500;
+                                                font-size: 12px;
+                                                align-items: center;" class="fs">
+                                                            <span>
+                                                                <%=mailDetails[i].extraService.hepstarServices[k].name%>
+                                                            </span>
+                                                        </div>
+                                                        <div style="float: right;font-family: Open Sans !important;
+                                                font-style: normal;
+                                                font-weight: 500;
+                                                font-size: 12px;
+                                                align-items: center;" class="fs">
+                                                            <span>
+                                                                <%=mailDetails[i].extraService.hepstarServices[k].currency%>
+                                                                    <%=mailDetails[i].extraService.hepstarServices[k].price%>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <% } %>
+                                            </div>
+                                        </div>
+
+                                        <div class="card"
+                                            style="page-break-after:auto;box-shadow: 1px 0 10px 0 rgba(0, 0, 0, 0.2), 0 1px 10px 0 rgba(0, 0, 0, 0.24);border-radius: 4px;padding: 20px;">
+                                            <div class="card-body">
+                                                <h3 class="head" style="margin-left: 5px;font-family: Open Sans !important;
+                                            font-style: normal;
+                                            font-weight: 500;
+                                            font-size: 16px;
+                                            color: #0057B9;">FARE DETAILS</h3>
+                                                <div style="padding: 10px; background: rgba(188, 213, 243, 0.4)!important; text-align: center;color: #0057B9;"
+                                                    class="fbDiv fentBlue">
+                                                    <div style="float: left;text-align: left; width: 50%;">
+                                                        <span style="font-family: Open Sans !important;
+                                                font-style: normal;
+                                                font-weight: 500;
+                                                font-size: 12px;
+                                                align-items: center;
+                                                color: #0057B9;" class="fs">Purchase Description
+                                                        </span>
+                                                    </div>
+                                                    <div style="float: left; text-align: center;width: 50%;">
+                                                        <span style="font-family: Open Sans !important;
+                                                font-style: normal;
+                                                font-weight: 500;
+                                                font-size: 12px;
+                                                align-items: center;
+                                                color: #0057B9;" class="fs">Price
+                                                        </span>
+                                                    </div>
+                                                    <div style="clear: both;"></div>
+                                                </div>
+                                                <% for(var j=0; j
+                                                    <mailDetails[i].bookingObj.result.bookings[0].bookingResponse.passengers.length;
+                                                    j++) { %>
+                                                    <div style="padding: 10px;  text-align: center;"
+                                                        class="fbDiv fentBlue">
+                                                        <div style="float: left;text-align: left; width: 50%;">
+                                                            <span style="font-family: Open Sans !important;
+                                                    font-style: normal;
+                                                    font-weight: 500;
+                                                    font-size: 12px;
+                                                    align-items: center;
+                                                   " class="fs">Base Fare ( <%=
+                                                                    mailDetails[i].bookingObj.result.bookings[0].bookingResponse.passengers.length
+                                                                    %> Traveller)
+                                                            </span>
+                                                        </div>
+                                                        <div style="float: left; text-align: center;width: 50%;">
+                                                            <span style="font-family: Open Sans !important;
+                                                    font-style: normal;
+                                                    font-weight: 500;
+                                                    font-size: 12px;
+                                                    align-items: center;
+                                                    " class="fs">
+                                                                <%=
+                                                                    mailDetails[i].bookingObj.result.bookings[0].bookingResponse.pnr.storedFares[0].fareDetails.equivalentBaseFare.currencyCode%>
+                                                                    &nbsp;&nbsp
+                                                                    <%=
+                                                                        mailDetails[0].bookingObj.result.bookings[0].bookingResponse.totalPrice.value%>
+                                                            </span>
+                                                        </div>
+                                                        <div style="clear: both;"></div>
+                                                    </div>
+                                                    <div style="padding: 10px;  text-align: center;"
+                                                        class="fbDiv fentBlue">
+                                                        <div style="float: left;text-align: left; width: 50%;">
+                                                            <span style="font-family: Open Sans !important;
+                                                        font-style: normal;
+                                                        font-weight: 500;
+                                                        font-size: 12px;
+                                                        align-items: center;
+                                                        " class="fs">Fee & Surcharges
+                                                            </span>
+                                                        </div>
+                                                        <div style="float: left; text-align: center;width: 50%;">
+                                                            <span style="font-family: Open Sans !important;
+                                                        font-style: normal;
+                                                        font-weight: 500;
+                                                        font-size: 12px;
+                                                        align-items: center;
+                                                        " class="fs">
+                                                                <%=
+                                                                    mailDetails[i].bookingObj.result.bookings[0].bookingResponse.pnr.storedFares[0].fareDetails.totalTax.currencyCode%>
+                                                                    &nbsp;&nbsp
+                                                                    <%=
+                                                                        mailDetails[0].bookingObj.result.bookings[0].bookingResponse.tax.value%>
+                                                            </span>
+                                                        </div>
+                                                        <div style="clear: both;"></div>
+                                                    </div>
+                                                    <div style="padding: 10px;  text-align: center;"
+                                                        class="fbDiv fentBlue">
+                                                        <div style="float: left;text-align: left; width: 50%;">
+                                                            <span style="font-family: Open Sans !important;
+                                                            font-style: normal;
+                                                            font-weight: 500;
+                                                            font-size: 12px;
+                                                            align-items: center;
+                                                            " class="fs">Extras (Baggage)
+                                                            </span>
+                                                        </div>
+                                                        <div style="float: left; text-align: center;width: 50%;">
+                                                            <span style="font-family: Open Sans !important;
+                                                            font-style: normal;
+                                                            font-weight: 500;
+                                                            font-size: 12px;
+                                                            align-items: center;
+                                                            " class="fs">
+                                                                <%= baggage.currency %>
+                                                                    <%= baggage.price %>
+                                                            </span>
+                                                        </div>
+                                                        <div style="clear: both;"></div>
+                                                    </div>
+
+                                                    <div style="padding: 10px;  text-align: center;"
+                                                        class="fbDiv fentBlue">
+                                                        <div style="float: left;text-align: left; width: 50%;">
+                                                            <span style="font-family: Open Sans !important;
+                                                        font-style: normal;
+                                                        font-weight: 500;
+                                                        font-size: 12px;
+                                                        align-items: center;
+                                                        " class="fs">Add-Ons
+                                                            </span>
+                                                        </div>
+                                                        <div style="float: left; text-align: center;width: 50%;">
+                                                            <span style="font-family: Open Sans !important;
+                                                        font-style: normal;
+                                                        font-weight: 500;
+                                                        font-size: 12px;
+                                                        align-items: center;
+                                                        " class="fs">
+                                                                <%= service.currency %>
+                                                                    <%= service.price %>
+                                                            </span>
+                                                        </div>
+                                                        <div style="clear: both;"></div>
+                                                    </div>
+
+                                                    <div style="padding: 10px;  text-align: center;"
+                                                        class="fbDiv fentBlue">
+                                                        <div style="float: left;text-align: left; width: 50%;">
+                                                            <span style="font-family: Open Sans !important;
+                                                        font-style: normal;
+                                                        font-weight: 600;
+                                                        font-size: 12px;
+                                                        align-items: center;
+                                                        " class="fs">TOTAL AMOUNT PAID
+                                                            </span>
+                                                        </div>
+                                                        <div style="float: left; text-align: center;width: 50%;">
+                                                            <span style="font-family: Open Sans !important;
+                                                        font-style: normal;
+                                                        font-weight: 500;
+                                                        font-size: 12px;
+                                                        align-items: center;
+                                                        " class="fs">
+                                                                <%=
+                                                                    mailDetails[i].bookingObj.result.bookings[0].bookingResponse.pnr.storedFares[0].fareDetails.grandTotal.currencyCode%>
+                                                                    &nbsp;&nbsp
+                                                                    <%= mailDetails[0].bookingObj.result.bookings[0].bookingResponse.totalPrice.value
+                                                                        +
+                                                                        mailDetails[0].bookingObj.result.bookings[0].bookingResponse.tax.value
+                                                                        + service.price + baggage.price %>
+                                                            </span>
+                                                        </div>
+                                                        <div style="clear: both;"></div>
+                                                    </div>
+                                                    <% } %>
+                                            </div>
+                                        </div>
+
+                                        <div class="card"
+                                            style="page-break-after:auto;box-shadow: 1px 0 10px 0 rgba(0, 0, 0, 0.2), 0 1px 10px 0 rgba(0, 0, 0, 0.24);border-radius: 4px;padding: 20px;">
+                                            <div class="card-body">
+                                                <h3 class="head" style="margin-left: 5px;font-family: Open Sans !important;
+                                                font-style: normal;
+                                                font-weight: 500;
+                                                font-size: 16px;
+                                                color: #0057B9;">24 x 7 CUSTOMER SUPPORT</h3>
+                                                <div style="padding: 10px; background: rgba(188, 213, 243, 0.4)!important;"
+                                                    class="fbDiv fentBlue">
+                                                    <div style="font-family: Open Sans !important;
+                                                font-style: normal;
+                                                font-weight: 600;
+                                                font-size: 12px;
+                                                align-items: center;width: 50%;float: left;" class="fs">Wadiia Support
+                                                    </div>
+                                                    <div style="font-family: Open Sans !important;
+                                                font-style: normal;
+                                                font-weight: 600;
+                                                font-size: 12px;
+                                                align-items: center;width: 50%;float: left;" class="fs">Airline Support
+                                                    </div>
+                                                    <div style="clear: both;"></div>
+                                                </div>
+                                                <div>
+                                                    <div style="font-family: Open Sans !important;
+                                                font-style: normal;
+                                                font-weight: 500;
+                                                font-size: 12px;
+                                                align-items: center;" class="fs">Flight Delay Compensation
+                                                    </div>
+                                                    <div>
+                                                        <div style="font-family: Open Sans !important;
+                                                font-style: normal;
+                                                font-weight: 500;
+                                                font-size: 12px;
+                                                align-items: center;width: 50%;float: left;" class="fs">
+                                                            <p><span style="font-weight: 600;"> E-Mail</span>
+                                                                wadiiasupport@gmail.com </p>
+                                                        </div>
+                                                        <div style="font-family: Open Sans !important;
+                                                font-style: normal;
+                                                font-weight: 500;
+                                                font-size: 12px;
+                                                align-items: center;width: 50%;float: left;" class="fs">
+                                                            <p><span style="font-weight: 600;"> KLM Airline</span> +91
+                                                                9898989898 </p>
+                                                        </div>
+                                                        <div style="clear: both;"></div>
+                                                    </div>
+                                                    <div>
+                                                        <div style="font-family: Open Sans !important;
+                                                font-style: normal;
+                                                font-weight: 500;
+                                                font-size: 12px;
+                                                align-items: center;width: 50%;float: left;" class="fs">
+                                                            <p><span style="font-weight: 600;"> Tel </span> +91
+                                                                9898989898 (South Africa) <br> +91 9898989898 (South
+                                                                Africa) </p>
+                                                        </div>
+                                                        <div style="clear: both;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card"
+                                            style="page-break-after:auto;box-shadow: 1px 0 10px 0 rgba(0, 0, 0, 0.2), 0 1px 10px 0 rgba(0, 0, 0, 0.24);border-radius: 4px;padding: 20px;">
+                                            <div class="card-body">
+                                                <h3 class="head" style="margin-left: 5px;font-family: Open Sans !important;
+                                                    font-style: normal;
+                                                font-weight: 500;
+                                                font-size: 16px;
+                                                color: #0057B9;">IMPORTANT INFORAMATION</h3>
+                                                <div>
+                                                    <ul style="font-family:  Open Sans !important;
+                                                    font-style: normal;
+                                                    font-weight: 400;
+                                                    font-size: 12px;
+                                                    line-height: 18px;
+                                                    display: flex;
+                                                    align-items: center;
+                                                    letter-spacing: 0.02em;
+                                                    color: #000000;">
+                                                        <li>Please be informed that tickets are non-transferable. Also
+                                                            note that not all tickets are refundable. Kindly read
+                                                            carefully all fare rules on your ticket.</li>
+                                                        <li>
+                                                            Please see your attached e-ticket for your exact baggage
+                                                            allowance. </li>
+
+                                                        <li> You may also need a visa to visit your destination country.
+                                                            For
+                                                            visa requirements, please check this page for more
+                                                            information
+                                                            about visa requirements. If your final destination requires
+                                                            an
+                                                            E-Visa, you can apply here.</li>
+
+                                                        <li> We understand that your plans may change at any time. While
+                                                            we
+                                                            do not charge a cancellation or change fee, please be aware
+                                                            that
+                                                            the airline may do so depending on their policies. As a
+                                                            result,
+                                                            you may be charged for any changes or cancellations. The
+                                                            penalty
+                                                            regulations for changes and cancellations can be found here.
+                                                        </li>
+
+                                                        <li> For all flights check-in, every passenger must present a
+                                                            valid
+                                                            form of identification. For domestic flights, you’ll need
+                                                            either
+                                                            your National ID or a passport. For international flights,
+                                                            only
+                                                            a passport will suffice. If you fail to show acceptable
+                                                            proof of
+                                                            identification that matches the names on your reservation,
+                                                            you
+                                                            may be denied check-in without a refund.</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                </div>
+                </td>
+                </tr>
+                </tbody>
+
+                </table>
+    </div>
+    <% } %>
+        </section>
+        </div>
+        <footer style="position: fixed;bottom: -50px; text-align: center;background: #0057B9;width: 100%">
+            <h1 style="font-family: Open Sans !important;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        text-align: center;
+        color: #FFFFFF;">Africa’s Trusted Travel Brand</h1>
+        </footer>
+</body>
+
+</html>

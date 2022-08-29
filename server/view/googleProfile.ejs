@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Google Authentication</title>
+    <link href="./css/icon.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+        href="./css/materialize.min.css">
+    <style>
+        .card:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        }
+
+        .image {
+            border: 1px solid;
+            border-radius: 50%;
+            border-style: outset;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            background: #FFF;
+            margin: 40px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <nav style="background-color:#ff0000" class="" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="#" class="brand-logo">Google Authentication</a>
+            <a href="/googlelogout" class="right">Logout</a>
+        </div>
+    </nav>
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+            <br>
+            <div class="row center">
+                <div class="col s12">
+                    <div class="card">
+                        <div style="background-color:#ff000075">
+                            <img class="image box" src="<%=pic%>" width="200" height="200" alt="">
+                            </strong></span>
+                        </div>
+                        <div class="card-action">
+                            <h5>
+                                <%= name %>
+                            </h5>
+                            <p>
+                               
+                            <strong>email</strong>: <%= email %><br>
+                            </p>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+ <!doctype html>
+ <html>
+  <body>
+    <h3>Dear {{ user_name }},</h3>
+    <h5>Greetings from Wadiia!!!</h5>
+    <p>
+      <b>Congratulations!</b> You have been registered to the Wadiia System!
+    </p>
+
+    <p>Below are your credentials for login!</p>
+
+    <p>Username :- {{ user_email }}</p>
+    <p>Password :- <b> {{ password }}</b></p>
+    <p>
+      Please
+      <a href="{{websiteURL}}"
+        >click here</a>
+      to visit the portal.
+    </p>
+    <p>Note :- Please change your password once your login to the system.</p>
+    <p>Regards,</p>
+    <p>Wadiia</p>
+  </body>
+</html> 

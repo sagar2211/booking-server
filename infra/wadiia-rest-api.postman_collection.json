@@ -1,0 +1,470 @@
+{
+	"info": {
+		"_postman_id": "a8d31a06-2c99-4ca8-a02f-e783a6e69659",
+		"name": "wadiia-rest-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "publicServices",
+			"item": [
+				{
+					"name": "GetAirlinesByPrefix",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3OGM1MDkxMy04ZjViLTQ2OTQtYmJmYS04YzY2MjYyNjlmNmUiLCJVc2VyTmFtZSI6Imlzc2FoIiwiV2ViSWQiOiIzMGNkN2QyMC0wNjk4LTRhZjUtYTQxYi1mOGRlZTc2Yzk2MTAiLCJXZWJOYW1lIjoiYXRzdHJhdmVsIiwiQnJhbmNoTmFtZSI6ImF0c3RyYXZlbCIsIkJyYW5jaEdyb3VwTmFtZSI6IkFUUyBUcmF2ZWwiLCJhcHB2ZXJzaW9uIjoiQVAtVEVTVC0xMDUiLCJqdGkiOiI1MTZhNTA1Zi1hZGI0LTRiNGEtYjA3Zi01ZDE1ODIxYTY5YjIiLCJpYXQiOjE2Mzc4OTg5MTYsInJvbGVzIjoidWEiLCJuYmYiOjE2Mzc4OTg5MTUsImV4cCI6MTYzNzkwNjExNSwiaXNzIjoiaHR0cHM6Ly90ZXN0LmFwaS5hZ2VudHBsdXMuaW8iLCJhdWQiOiJodHRwczovL3Rlc3QuYXBpLmFnZW50cGx1cy5pbyJ9.-cxw51v5E9J6fGclV2DvoUs8Zxw2agWraEqvoASBq6Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{URL}}/travelApi/publicservices/GetAirlinesByPrefix/pune",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"travelApi",
+								"publicservices",
+								"GetAirlinesByPrefix",
+								"pune"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "availablefares",
+			"item": [
+				{
+					"name": "hitchHikerAvailablefaresSearch",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3OGM1MDkxMy04ZjViLTQ2OTQtYmJmYS04YzY2MjYyNjlmNmUiLCJVc2VyTmFtZSI6Imlzc2FoIiwiV2ViSWQiOiIzMGNkN2QyMC0wNjk4LTRhZjUtYTQxYi1mOGRlZTc2Yzk2MTAiLCJXZWJOYW1lIjoiYXRzdHJhdmVsIiwiQnJhbmNoTmFtZSI6ImF0c3RyYXZlbCIsIkJyYW5jaEdyb3VwTmFtZSI6IkFUUyBUcmF2ZWwiLCJhcHB2ZXJzaW9uIjoiQVAtVEVTVC0xMDUiLCJqdGkiOiI1MTZhNTA1Zi1hZGI0LTRiNGEtYjA3Zi01ZDE1ODIxYTY5YjIiLCJpYXQiOjE2Mzc4OTg5MTYsInJvbGVzIjoidWEiLCJuYmYiOjE2Mzc4OTg5MTUsImV4cCI6MTYzNzkwNjExNSwiaXNzIjoiaHR0cHM6Ly90ZXN0LmFwaS5hZ2VudHBsdXMuaW8iLCJhdWQiOiJodHRwczovL3Rlc3QuYXBpLmFnZW50cGx1cy5pbyJ9.-cxw51v5E9J6fGclV2DvoUs8Zxw2agWraEqvoASBq6Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"segments\": [{\r\n\t\t\"from\": \"[AMS] - Amsterdam - All airports\",\r\n\t\t\"to\": \"[LON] - London - All airports\",\r\n\t\t\"radius\": 0,\r\n\t\t\"cabinClasses\": {\r\n\t\t\t\"economy\": false,\r\n\t\t\t\"premiumEconomy\": false,\r\n\t\t\t\"business\": false,\r\n\t\t\t\"first\": false\r\n\t\t},\r\n\t\t\"departureDate\": {\r\n\t\t\t\"day\": 30,\r\n\t\t\t\"month\": 11,\r\n\t\t\t\"year\": 2021\r\n\t\t}\r\n\t}],\r\n\t\"passengers\": {\r\n\t\t\"adultPassengers\": {\r\n\t\t\t\"passengerType\": \"ADT\",\r\n\t\t\t\"passengers\": [{}]\r\n\t\t},\r\n\t\t\"childPassengers\": {\r\n\t\t\t\"passengerType\": \"CHD\",\r\n\t\t\t\"passengers\": []\r\n\t\t},\r\n\t\t\"infantPassengers\": {\r\n\t\t\t\"passengerType\": \"INF\",\r\n\t\t\t\"passengers\": []\r\n\t\t}\r\n\t},\r\n\t\"cabinClasses\": {\r\n\t\t\"economy\": true,\r\n\t\t\"premiumEconomy\": false,\r\n\t\t\"business\": false,\r\n\t\t\"first\": false\r\n\t},\r\n\t\"directFlightsOnly\": false,\r\n\t\"cabinClassPerLeg\": false,\r\n\t\"includeAirlines\": [],\r\n\t\"excludeAirlines\": [],\r\n\t\"overrideMultiChannelBranch\": \"\",\r\n\t\"overrideMultiChannelBranchgroup\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{URL}}/hitchHiker/availablefares/search",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"hitchHiker",
+								"availablefares",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ruleinformationtext",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3OGM1MDkxMy04ZjViLTQ2OTQtYmJmYS04YzY2MjYyNjlmNmUiLCJVc2VyTmFtZSI6Imlzc2FoIiwiV2ViSWQiOiIzMGNkN2QyMC0wNjk4LTRhZjUtYTQxYi1mOGRlZTc2Yzk2MTAiLCJXZWJOYW1lIjoiYXRzdHJhdmVsIiwiQnJhbmNoTmFtZSI6ImF0c3RyYXZlbCIsIkJyYW5jaEdyb3VwTmFtZSI6IkFUUyBUcmF2ZWwiLCJhcHB2ZXJzaW9uIjoiQVAtVEVTVC0xMDUiLCJqdGkiOiI1MTZhNTA1Zi1hZGI0LTRiNGEtYjA3Zi01ZDE1ODIxYTY5YjIiLCJpYXQiOjE2Mzc4OTg5MTYsInJvbGVzIjoidWEiLCJuYmYiOjE2Mzc4OTg5MTUsImV4cCI6MTYzNzkwNjExNSwiaXNzIjoiaHR0cHM6Ly90ZXN0LmFwaS5hZ2VudHBsdXMuaW8iLCJhdWQiOiJodHRwczovL3Rlc3QuYXBpLmFnZW50cGx1cy5pbyJ9.-cxw51v5E9J6fGclV2DvoUs8Zxw2agWraEqvoASBq6Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"fareResultID\": \"9c40bc0a-9a09-4758-ade6-eefa8014946d\",\r\n  \"fareIndex\": 1,\r\n  \"legIndex\": 0,\r\n  \"connectionIndex\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{URL}}/hitchHiker/availablefares/get/ruleinformationtext",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"hitchHiker",
+								"availablefares",
+								"get",
+								"ruleinformationtext"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ancillaries",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3OGM1MDkxMy04ZjViLTQ2OTQtYmJmYS04YzY2MjYyNjlmNmUiLCJVc2VyTmFtZSI6Imlzc2FoIiwiV2ViSWQiOiIzMGNkN2QyMC0wNjk4LTRhZjUtYTQxYi1mOGRlZTc2Yzk2MTAiLCJXZWJOYW1lIjoiYXRzdHJhdmVsIiwiQnJhbmNoTmFtZSI6ImF0c3RyYXZlbCIsIkJyYW5jaEdyb3VwTmFtZSI6IkFUUyBUcmF2ZWwiLCJhcHB2ZXJzaW9uIjoiQVAtVEVTVC0xMDUiLCJqdGkiOiI1MTZhNTA1Zi1hZGI0LTRiNGEtYjA3Zi01ZDE1ODIxYTY5YjIiLCJpYXQiOjE2Mzc4OTg5MTYsInJvbGVzIjoidWEiLCJuYmYiOjE2Mzc4OTg5MTUsImV4cCI6MTYzNzkwNjExNSwiaXNzIjoiaHR0cHM6Ly90ZXN0LmFwaS5hZ2VudHBsdXMuaW8iLCJhdWQiOiJodHRwczovL3Rlc3QuYXBpLmFnZW50cGx1cy5pbyJ9.-cxw51v5E9J6fGclV2DvoUs8Zxw2agWraEqvoASBq6Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"fareIdentifier\":{\r\n    \"fareIndex\":1,\r\n    \"fareResultID\":\"edddb6e1-767a-430f-a58d-5279f879efa1\"},\r\n    \"selectedLegConnections\":[0]}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{URL}}/hitchHiker/availablefares/get/ancillaries",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"hitchHiker",
+								"availablefares",
+								"get",
+								"ancillaries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get flight details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3OGM1MDkxMy04ZjViLTQ2OTQtYmJmYS04YzY2MjYyNjlmNmUiLCJVc2VyTmFtZSI6Imlzc2FoIiwiV2ViSWQiOiIzMGNkN2QyMC0wNjk4LTRhZjUtYTQxYi1mOGRlZTc2Yzk2MTAiLCJXZWJOYW1lIjoiYXRzdHJhdmVsIiwiQnJhbmNoTmFtZSI6ImF0c3RyYXZlbCIsIkJyYW5jaEdyb3VwTmFtZSI6IkFUUyBUcmF2ZWwiLCJhcHB2ZXJzaW9uIjoiQVAtVEVTVC0xMDUiLCJqdGkiOiI1MTZhNTA1Zi1hZGI0LTRiNGEtYjA3Zi01ZDE1ODIxYTY5YjIiLCJpYXQiOjE2Mzc4OTg5MTYsInJvbGVzIjoidWEiLCJuYmYiOjE2Mzc4OTg5MTUsImV4cCI6MTYzNzkwNjExNSwiaXNzIjoiaHR0cHM6Ly90ZXN0LmFwaS5hZ2VudHBsdXMuaW8iLCJhdWQiOiJodHRwczovL3Rlc3QuYXBpLmFnZW50cGx1cy5pbyJ9.-cxw51v5E9J6fGclV2DvoUs8Zxw2agWraEqvoASBq6Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n  \"fareResultID\": \"9c40bc0a-9a09-4758-ade6-eefa8014946d\",\r\n  \"fareIndex\": 1,\r\n  \"legIndex\": 0,\r\n  \"connectionIndex\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{URL}}/hitchHiker/availablefares/get/flightdetails",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"hitchHiker",
+								"availablefares",
+								"get",
+								"flightdetails"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "New Folder",
+			"item": []
+		},
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"prifix\": \"mr\",\r\n      \"firstName\": \"suraj\",\r\n      \"middleName\": \"satish\",\r\n      \"lastName\": \"narule\",\r\n      \"gender\": \"male\",\r\n      \"dateOfBirth\": \"1995-01-20T08:00:00\",\r\n      \"countryCode\": \"IND +91\",\r\n      \"mobile\": 9890359008,\r\n      \"email\": \"surajnarulesp108@gmail.com\",\r\n      \"gstNo\": true,\r\n      \"companyName\": \"codevian\",\r\n      \"registrationId\": \"0123456789\",\r\n      \"documentType\": \"PANCARD\",\r\n      \"DocumentId\": \"BIS123ZIN\",\r\n      \"passportNo\": 12546898,\r\n      \"passportIssuingCountry\": \"India\",\r\n      \"passportExpiry\": \"2035-01-01T08:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{URL}}/user/create",
+					"protocol": "http",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signUp user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"prifix\": \"mr\",\r\n      \"firstName\": \"onkar\",\r\n      \"middleName\": \"dhananjay\",\r\n      \"lastName\": \"vade\",\r\n      \"gender\": \"male\",\r\n      \"dateOfBirth\": \"1995-01-20T08:00:00\",\r\n      \"countryCode\": \"IND +91\",\r\n      \"mobile\": 9503379394,\r\n      \"email\": \"onkarvade95@gmail.com\",\r\n      \"taxNo\": true,\r\n      \"companyName\": \"codevian\",\r\n      \"registrationId\": \"0123456789\",\r\n      \"documentType\": \"PANCARD\",\r\n      \"DocumentId\": \"BIS123ZIN\",\r\n      \"passportNo\": 12546898,\r\n      \"passportIssuingCountry\": \"India\",\r\n      \"passportExpiry\": \"2035-01-01T08:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{URL}}/user/createUser",
+					"protocol": "http",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"user",
+						"createUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"surajnarulesp108@gmail.com\",\r\n    \"password\": \"f7in52ap\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{URL}}/user/authenticate",
+					"protocol": "http",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"user",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://{{URL}}/user/delete/618b7eb83e84518deb13fc04",
+					"protocol": "http",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"user",
+						"delete",
+						"618b7eb83e84518deb13fc04"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"prifix\": \"mr\",\r\n      \"firstName\": \"suraj\",\r\n      \"middleName\": \"satish\",\r\n      \"lastName\": \"narule\",\r\n      \"gender\": \"male\",\r\n      \"dateOfBirth\": \"2035-01-01T08:00:00\",\r\n      \"countryCode\": \"IND +91\",\r\n      \"mobile\": 9890359008,\r\n      \"email\": \"surajnarulesp108@gmail.com\",\r\n      \"gstNo\": true,\r\n      \"companyName\": \"codevian\",\r\n      \"registrationId\": \"0123456789\",\r\n      \"documentType\": \"PANCARD\",\r\n      \"DocumentId\": \"BIS123ZIN\",\r\n      \"passportNo\": 12546898,\r\n      \"passportIssuingCountry\": \"India\",\r\n      \"passportExpiry\": \"2035-01-01T08:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{URL}}/user/update/618b8c7b9a42a1b840bc25ba",
+					"protocol": "http",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"user",
+						"update",
+						"618b8c7b9a42a1b840bc25ba"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findbyid user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{URL}}/user/profile",
+					"protocol": "http",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"user",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pagination",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{URL}}/user/pagination?page=1&size=1",
+					"protocol": "http",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"user",
+						"pagination"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "size",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find all user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{URL}}/user/allUser",
+					"protocol": "http",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"user",
+						"allUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://{{URL}}/user/logout",
+					"protocol": "http",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"user",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "forgetPassword",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://{{URL}}/user/forgotPassword",
+					"protocol": "http",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"user",
+						"forgotPassword"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+  <title>Facebook Authentication</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="./css/icon.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css"
+    href="./css/materialize.min.css">
+
+  <style>
+    .btn:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+
+        }
+    .linkedin {
+      background-color: #1877F2 !important;
+      color: #fff !important;
+    }
+    .cancle {
+      background-color: #141414f3 !important;
+      color: #fff !important;
+    }
+
+    .fa-linkedin-f:before,
+    .fa-linkedin:before {
+      content: "\f0e1";
+    }
+  </style>
+  <script type="text/javascript">
+    if (window.location.hash && window.location.hash === '#_=_') {
+      if (window.history && history.pushState) {
+        window.history.pushState("", document.title, window.location.pathname);
+      } else {
+        // Prevent scrolling by storing the page's current scroll offset
+        var scroll = {
+          top: document.body.scrollTop,
+          left: document.body.scrollLeft
+        };
+        window.location.hash = '';
+        // Restore the scroll offset, should be flicker free
+        document.body.scrollTop = scroll.top;
+        document.body.scrollLeft = scroll.left;
+      }
+    }
+  </script>
+</head>
+<body>
+  <nav class="linkedin lighten-1" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">Wadiia System</a>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-content">
+              <h5>Wadiia System wants to access your Facebook Account</h5>
+            </div>
+            <div class="card-action">
+              <!-- <a href="auth/linkedin" class="waves-effect waves-light btn social linkedin">
+                <i class="fa fa-linkedin"></i>&nbsp; Sign in with Linkedin
+              </a><br><br> -->
+              <strong>This will allow Facebook to:</strong>
+              <p>See and download your contacts <br>
+                <b> Make sure you trust Wadiia System</b>
+                You may be sharing sensitive info with this site or app. You can always see or remove access in your Facebook Account.
+                Learn how Facebook helps you share data safely.
+                See Wadiia System Privacy Policy and Terms of Service.</p>
+              
+              <!-- <a href="/auth/windowslive" class="waves-effect waves-light btn social linkedin">
+                <i class="fa fa-windows"></i> &nbsp; Sign in with facebook
+              </a> -->
+              <p>Allows apps to read the Default Public Profile Fields on the User node. This permission is automatically granted to all apps.</p>
+             
+              <div class="d-flex justify-content-center">
+                <div class="">
+                  <button class="btn btn-warning cancle">Cancel</button>
+                </div>
+                <div class="ml-2">
+                  <a href="auth/facebook" class="waves-effect waves-light btn social linkedin">
+                    <i class="fa fa-facebook"></i>&nbsp; Sign in and Allow
+                  </a>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3"></div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="./js/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="./js/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="./js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</html>

@@ -1,0 +1,690 @@
+#print-section {
+    display: none;
+}
+.print {
+    display: block;
+}
+.print .page-header, .print .page-header-space {
+    margin-top: 13px;
+    border: none;
+}
+.print .page-footer, .print .page-footer-space {
+    margin-top: 11px;
+    height: 30px;
+    border: none;
+    width: 100%;
+}
+.print .page-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border: none;
+}
+.print .page-header {
+    position: fixed;
+    top: 0mm;
+    width: 100%;
+    border: none;
+}
+.print .page {
+    page-break-after: always;
+}
+.print .page .topText {
+    font-family: 'poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #000;
+}
+.print .page .confirmTicket p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    align-items: center;
+    color: #0057b9;
+    margin: 0;
+}
+.print .page .rute div {
+    padding: 0 34px;
+}
+.print .page .rute .airlineImg .airlineName, .print .page .rute .airlineImg .airlineNo {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    color: #525252;
+}
+.print .page .rute .depart h2 {
+    margin: 0;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: right;
+    color: #0057b9;
+}
+.print .page .rute .depart .cityName {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: right;
+    color: #0057b9;
+}
+.print .page .rute .depart .time {
+    margin-top: 12px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: right;
+    border-top: 1px solid #d4d4d4;
+    border-bottom: 1px solid #d4d4d4;
+    padding: 10px 0;
+}
+.print .page .rute .depart .airport {
+    width: 102px;
+    margin-top: 12px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 15px;
+    text-align: right;
+}
+.print .page .rute .depart .terminal {
+    margin-top: 12px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: right;
+    color: #000;
+}
+.print .page .rute .cabinSection {
+    margin-top: 41px;
+}
+.print .page .rute .cabinSection p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+    text-align: center;
+    color: #525252;
+    margin: 0 !important;
+    padding: 3px 0;
+}
+.print .page .rute .cabinSection .line {
+    width: 80px;
+    height: 1px;
+    border: 1px solid #0057b9;
+}
+.print .page .rute .return h2 {
+    margin: 0;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: left;
+    color: #0057b9;
+}
+.print .page .rute .return .cityName {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: left;
+    color: #0057b9;
+}
+.print .page .rute .return .time {
+    margin-top: 12px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: left;
+    border-top: 1px solid #d4d4d4;
+    border-bottom: 1px solid #d4d4d4;
+    padding: 10px 0;
+}
+.print .page .rute .return .airport {
+    width: 102px;
+    margin-top: 12px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 15px;
+    text-align: left;
+}
+.print .page .rute .return .terminal {
+    margin-top: 12px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: left;
+    color: #000;
+}
+.print .page .passenger .table > :not(caption) > * > *, .print .page .baggage .table > :not(caption) > * > * {
+    border-bottom-width: 0px !important;
+}
+.print .page .passenger .table > thead, .print .page .baggage .table > thead {
+    vertical-align: bottom;
+    background-color: rgba(188, 213, 243, 0.4);
+}
+.print .page .passenger .table > :not(:first-child), .print .page .baggage .table > :not(:first-child) {
+    border-top: 0px !important;
+}
+.print .page .passenger tbody .total, .print .page .baggage tbody .total {
+    border-top: 2px solid #d4d4d4;
+}
+.print .page .passenger p, .print .page .baggage p {
+    font-family: 'poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #000;
+}
+.print .page .fentBlue {
+    padding: 10px 10px;
+    margin: 0;
+    background: rgba(188, 213, 243, 0.4);
+    color: #0057b9;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    -webkit-print-color-adjust: exact;
+}
+.print .page .extra p {
+    font-family: 'poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #000;
+}
+.print .top {
+    padding: 10px 30px;
+    margin: 0;
+    background: linear-gradient(270deg, #0057b9 0%, rgba(0, 87, 185, 0.2) 98.85%);
+    color: white;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    align-items: center;
+}
+.print .top h3 {
+    margin: 0;
+    text-align: center !important;
+    font-weight: 500;
+    font-size: 18px;
+}
+.print .head {
+    margin: 0;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #0057b9;
+}
+.print .head p {
+    font-size: 16px !important;
+}
+.print .fentBlue {
+    padding: 10px 10px;
+    margin: 0;
+    background: rgba(188, 213, 243, 0.4);
+    color: #0057b9;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+}
+.print thead {
+    width: 100%;
+    display: table-header-group;
+}
+.print tfoot {
+    width: 100%;
+    display: table-footer-group;
+}
+.print button {
+    display: none;
+}
+.print tbody {
+    margin: 0px;
+}
+.print footer {
+    width: 100%;
+    display: block;
+    position: fixed;
+    bottom: 0;
+    background-color: #0057b9;
+    -webkit-print-color-adjust: exact;
+}
+.print header {
+    width: 100%;
+    display: block;
+    position: fixed;
+    top: 0;
+    background-color: #0057b9;
+    -webkit-print-color-adjust: exact;
+}
+.print header div p {
+    margin: 0;
+}
+.print table {
+    page-break-after: auto;
+    margin-bottom: 5px !important;
+}
+.print tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+}
+.print td {
+    page-break-inside: avoid;
+    page-break-after: auto;
+}
+.print thead {
+    display: table-header-group;
+    -webkit-print-color-adjust: exact;
+}
+.print .underTable thead tr {
+    background: rgba(188, 213, 243, 0.4);
+    -webkit-print-color-adjust: exact;
+}
+@media screen {
+    .page-header, .page-header-space {
+        display: none;
+   }
+    .page-footer, .page-footer-space {
+        display: none;
+   }
+    .page-footer {
+        display: none;
+   }
+    .page-header {
+        display: none;
+   }
+    .page {
+        height: 475px;
+        scroll-behavior: auto;
+   }
+}
+@media print {
+    .print {
+        display: block;
+   }
+    .print .page-header, .print .page-header-space {
+        margin-top: 13px;
+        height: 30px;
+        border: none;
+   }
+    .print .page-footer, .print .page-footer-space {
+        margin-top: 11px;
+        height: 30px;
+        border: none;
+        width: 100%;
+   }
+    .print .page-footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        border: none;
+   }
+    .print .page-header {
+        position: fixed;
+        top: 0mm;
+        width: 100%;
+        border: none;
+   }
+    .print .page {
+        page-break-after: always;
+   }
+    .print .page .topText {
+        font-family: 'poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        color: #000;
+   }
+    .print .page .confirmTicket p {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+        align-items: center;
+        color: #0057b9;
+        margin: 0;
+   }
+    .print .page .rute div {
+        padding: 0 34px;
+   }
+    .print .page .rute .airlineImg .airlineName, .print .page .rute .airlineImg .airlineNo {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 15px;
+        display: flex;
+        align-items: center;
+        color: #525252;
+   }
+    .print .page .rute .depart h2 {
+        margin: 0;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 36px;
+        text-align: right;
+        color: #0057b9;
+   }
+    .print .page .rute .depart .cityName {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+        text-align: right;
+        color: #0057b9;
+   }
+    .print .page .rute .depart .time {
+        margin-top: 12px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+        text-align: right;
+        border-top: 1px solid #d4d4d4;
+        border-bottom: 1px solid #d4d4d4;
+        padding: 10px 0;
+   }
+    .print .page .rute .depart .airport {
+        width: 102px;
+        margin-top: 12px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 15px;
+        text-align: right;
+   }
+    .print .page .rute .depart .terminal {
+        margin-top: 12px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+        text-align: right;
+        color: #000;
+   }
+    .print .page .rute .cabinSection {
+        margin-top: 41px;
+   }
+    .print .page .rute .cabinSection p {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 15px;
+        text-align: center;
+        color: #525252;
+        margin: 0 !important;
+        padding: 3px 0;
+   }
+    .print .page .rute .cabinSection .line {
+        width: 80px;
+        height: 1px;
+        border: 1px solid #0057b9;
+   }
+    .print .page .rute .return h2 {
+        margin: 0;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 36px;
+        text-align: left;
+        color: #0057b9;
+   }
+    .print .page .rute .return .cityName {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+        text-align: left;
+        color: #0057b9;
+   }
+    .print .page .rute .return .time {
+        margin-top: 12px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+        text-align: left;
+        border-top: 1px solid #d4d4d4;
+        border-bottom: 1px solid #d4d4d4;
+        padding: 10px 0;
+   }
+    .print .page .rute .return .airport {
+        width: 102px;
+        margin-top: 12px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 15px;
+        text-align: left;
+   }
+    .print .page .rute .return .terminal {
+        margin-top: 12px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+        text-align: left;
+        color: #000;
+   }
+    .print .page .extra {
+        page-break-after: auto;
+   }
+    .print .page .extra .table > :not(caption) > * > * {
+        border-bottom-width: 0px !important;
+        page-break-after: always;
+   }
+    .print .page .passenger, .print .page .baggage {
+        page-break-after: auto;
+   }
+    .print .page .passenger .table > :not(caption) > * > *, .print .page .baggage .table > :not(caption) > * > * {
+        border-bottom-width: 0px !important;
+        page-break-after: always;
+   }
+    .print .page .passenger .table > thead, .print .page .baggage .table > thead {
+        vertical-align: bottom;
+        background-color: rgba(188, 213, 243, 0.4);
+   }
+    .print .page .passenger .table > :not(:first-child), .print .page .baggage .table > :not(:first-child) {
+        border-top: 0px !important;
+   }
+    .print .page .passenger tbody .total, .print .page .baggage tbody .total {
+        page-break-after: always;
+        border-top: 2px solid #d4d4d4;
+   }
+    .print .page .passenger p, .print .page .baggage p {
+        font-family: 'poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        color: #000;
+   }
+    .print .page .fentBlue {
+        padding: 10px 10px;
+        margin: 0;
+        background: rgba(188, 213, 243, 0.4);
+        color: #0057b9;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 18px;
+        display: flex;
+        align-items: center;
+        -webkit-print-color-adjust: exact;
+   }
+    .print .page .extra {
+        page-break-after: auto;
+   }
+    .print .page .extra p {
+        font-family: 'poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        color: #000;
+   }
+    .print .top {
+        padding: 10px 30px;
+        margin: 0;
+        background: linear-gradient(270deg, #0057b9 0%, rgba(0, 87, 185, 0.2) 98.85%);
+        color: white;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 18px;
+        align-items: center;
+   }
+    .print .top h3 {
+        margin: 0;
+        text-align: center !important;
+        font-weight: 500;
+        font-size: 18px;
+   }
+    .print .head {
+        margin: 0;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        color: #0057b9;
+   }
+    .print .head p {
+        font-size: 16px !important;
+   }
+    .print .fentBlue {
+        padding: 10px 10px;
+        margin: 0;
+        background: rgba(188, 213, 243, 0.4);
+        color: #0057b9;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 18px;
+        display: flex;
+        align-items: center;
+   }
+    .print thead {
+        width: 100%;
+        display: table-header-group;
+   }
+    .print tfoot {
+        width: 100%;
+        display: table-footer-group;
+   }
+    .print button {
+        display: none;
+   }
+    .print tbody {
+        margin: 0px;
+   }
+    .print footer {
+        width: 100%;
+        display: block;
+        position: fixed;
+        bottom: 0;
+        background-color: #0057b9;
+        -webkit-print-color-adjust: exact;
+   }
+    .print header {
+        width: 100%;
+        display: block;
+        position: fixed;
+        top: 0;
+        background-color: #0057b9;
+        -webkit-print-color-adjust: exact;
+   }
+    .print header div p {
+        margin: 0;
+   }
+    .print table {
+        page-break-after: auto;
+        margin-bottom: 5px !important;
+   }
+    .print tr {
+        page-break-inside: avoid;
+        page-break-after: auto;
+   }
+    .print td {
+        page-break-inside: avoid;
+        page-break-after: auto;
+   }
+    .print thead {
+        display: table-header-group;
+        -webkit-print-color-adjust: exact;
+   }
+    .print .underTable thead tr {
+        background: rgba(188, 213, 243, 0.4);
+        -webkit-print-color-adjust: exact;
+   }
+}
+
+.ff{
+    color: red !important;
+    font-size: 32px !important;
+}
+
+/* create by sagar */
+.card {
+    /* background: #FFFFFF;
+    border-radius: 4px; */
+    box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.05), 0px 1px 10px rgba(0, 0, 0, 0.05);
+  }
+.card-body{
+    padding: 16px;
+}

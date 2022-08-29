@@ -1,0 +1,30 @@
+image: atlassian/default-image:3
+pipelines:
+  branches:
+    master:
+      - step:
+          name: Build Docker Image and push to AWS ECR Setup
+          services:
+            - docker
+          script:
+            # creates variables (timestamp, image name and tag)
+            - export TAG=$(echo $BITBUCKET_COMMIT | cut -c1-7)
+            - echo $TAG
+            - export IMAGE_NAME=wadiia_booking_system_server            
+            # builds docker image from a local dockerfile
+            - docker build -t wadiia_booking_system_server .
+            # tags image as a way to id it by the TAG
+            - docker tag wadiia_booking_system_server wadiia_booking_system_server:$TAG
+            # use pipe to push the image to AWS ECR
+            - pipe: atlassian/aws-ecr-push-image:1.5.0
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+                IMAGE_NAME: wadiia_booking_system_server:$TAG
+                TAGS: $TAG
+                
+definitions:
+  services:
+    docker:
+      memory: 3072
